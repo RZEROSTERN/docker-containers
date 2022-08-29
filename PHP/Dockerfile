@@ -26,7 +26,7 @@ RUN apt-get update && \
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip && \
-    pecl install mcrypt-1.0.4 redis && \
+    pecl install mcrypt-1.0.5 redis && \
     docker-php-ext-enable mcrypt redis && \
     docker-php-ext-configure pdo_mysql && \
     docker-php-ext-install pdo_mysql
